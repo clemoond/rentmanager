@@ -1,5 +1,6 @@
 package com.epf.rentmanager.service;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,28 +8,25 @@ import com.epf.rentmanager.exception.DaoException;
 import com.epf.rentmanager.exception.ServiceException;
 import com.epf.rentmanager.model.Vehicle;
 import com.epf.rentmanager.dao.VehicleDao;
+import org.springframework.stereotype.Service;
 
+@Service
 public class VehicleService {
 
 	private VehicleDao vehicleDao;
 	public static VehicleService instance = null;
 	
-	private VehicleService() {
-		this.vehicleDao = VehicleDao.getInstance();
+	private VehicleService(VehicleDao vehicleDao) {
+		this.vehicleDao = vehicleDao;
 	}
-	
-	public static VehicleService getInstance() {
-		if (instance == null) {
-			instance = new VehicleService();
-		}
-		
-		return instance;
-	}
-	
-	
+
 	public long create(Vehicle vehicle) throws ServiceException {
-		// TODO: créer un véhicule
-		return 0;
+		try {
+			return this.vehicleDao.create(vehicle);
+		}
+		catch (DaoException exc){
+			throw new ServiceException("Le véhicule n'a pas été créé.");
+		}
 	}
 
 	public Vehicle findById(long id) throws ServiceException {
@@ -36,7 +34,7 @@ public class VehicleService {
 			throw new ServiceException("L'id est négatif");
 		}
 		try {
-			return vehicleDao.getInstance().findById(id);
+			return vehicleDao.findById(id);
 		} catch (DaoException e) {
 			e.printStackTrace();
 			throw new ServiceException("Erreur");
@@ -45,15 +43,15 @@ public class VehicleService {
 
 	public List<Vehicle> findAll() throws ServiceException {
 		try {
-			return this.vehicleDao.getInstance().findAll();
+			return this.vehicleDao.findAll();
 		} catch (DaoException e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	public int count() {
+	public int count() throws DaoException {
 		//compter le nombre de véhicle
-		return 1;
+		return this.vehicleDao.count();
 	}
 	
 }

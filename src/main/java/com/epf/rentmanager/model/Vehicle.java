@@ -38,13 +38,18 @@ public class Vehicle {
         this.nb_places = nb_places;
     }
 
-    public Vehicle(int id, String constructeur, byte nb_places) {
+    public Vehicle(int id, String constructeur, String modele, byte nb_places) {
         this.id = id;
         this.constructeur = constructeur;
-        //this.modele = modele;
+        this.modele = modele;
         this.nb_places = nb_places;
     }
 
+    public Vehicle(String constructeur, String modele, byte nb_places) {
+        this.constructeur = constructeur;
+        this.modele = modele;
+        this.nb_places = nb_places;
+    }
     public Vehicle(){
         this.id = 0;
         this.constructeur = "";

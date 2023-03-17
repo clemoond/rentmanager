@@ -1,1 +1,3 @@
-epf\AppTest.class
+com\epf\rentmanager\AppTest.class
+com\epf\rentmanager\validator\ClientValidatorTest.class
+com\epf\rentmanager\service\ClientServiceTest.class

@@ -8,35 +8,36 @@ import com.epf.rentmanager.exception.DaoException;
 import com.epf.rentmanager.exception.ServiceException;
 import com.epf.rentmanager.model.Client;
 import com.epf.rentmanager.persistence.ConnectionManager;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class ClientDao {
 	
 	private static ClientDao instance = null;
 	private ClientDao() {}
-
-	public static ClientDao getInstance() {
-		if(instance == null) {
-			instance = new ClientDao();
-		}
-		return instance;
-	}
 	
 	private static final String CREATE_CLIENT_QUERY = "INSERT INTO Client(nom, prenom, email, naissance) VALUES(?, ?, ?, ?);";
 	private static final String DELETE_CLIENT_QUERY = "DELETE FROM Client WHERE id=?;";
 	private static final String FIND_CLIENT_QUERY = "SELECT nom, prenom, email, naissance FROM Client WHERE id=?;";
 	private static final String FIND_CLIENTS_QUERY = "SELECT id, nom, prenom, email, naissance FROM Client;";
+	private static final String COUNT_CLIENTS_QUERY = "SELECT COUNT(id) FROM Client;";
 	
 	public long create(Client client) throws DaoException, SQLException {
-		Connection connection = ConnectionManager.getConnection();
-		Statement statement = connection.createStatement();
-		PreparedStatement stmt = connection.prepareStatement(CREATE_CLIENT_QUERY);
-		stmt.setString(1, client.getNom());
-		stmt.setString(2, client.getPrenom());
-		stmt.setString(3, client.getEmail());
-		//stmt.setString(4, client.getNaissance());
+		try{
+			Connection connection = ConnectionManager.getConnection();
+			PreparedStatement preparedStatement = connection.prepareStatement(CREATE_CLIENT_QUERY);
+			preparedStatement.setString(1, client.getNom());
+			preparedStatement.setString(2, client.getPrenom());
+			preparedStatement.setString(3, client.getEmail());
+			preparedStatement.setString(4, String.valueOf(client.getNaissance()));
 
-		stmt.execute();
-		return 1;
+			long id = ((PreparedStatement) preparedStatement).executeUpdate();
+			connection.close();
+			return id;
+		}
+		catch (SQLException e) {
+			throw new DaoException("Echec de la création du client Dao");
+		}
 	}
 	
 	public long delete(Client client) throws DaoException {
@@ -63,9 +64,9 @@ public class ClientDao {
 		}
 	}
 
-	public ArrayList<Client> findAll() throws DaoException {
+	public List<Client> findAll() throws DaoException {
 		//fait avec le prof le 20/02
-		ArrayList<Client> clients= new ArrayList<Client>();
+		List<Client> clients= new ArrayList<Client>();
 		try {
 			Connection connection = ConnectionManager.getConnection();
 			Statement statement = connection.createStatement();
@@ -77,11 +78,22 @@ public class ClientDao {
 				Client client = new Client(rs.getInt("id"), rs.getString("nom"), rs.getString("prenom"), rs.getString("email"), rs.getDate("naissance").toLocalDate());
 				clients.add(client);
 			}
-			connection.close();
 			return clients;
 		}
 		catch (SQLException e) {
 			throw new DaoException("Erreur");
+		}
+	}
+
+	public int count() throws DaoException {
+		try  {
+			Connection connection = ConnectionManager.getConnection();
+			PreparedStatement statement = connection.prepareStatement(COUNT_CLIENTS_QUERY);
+			ResultSet rs = ((PreparedStatement) statement).executeQuery();
+			rs.next();
+			return rs.getInt("COUNT(id)");
+		} catch (SQLException e) {
+			throw new DaoException("Le comptage des clients n'a pas fonctionné");
 		}
 	}
 

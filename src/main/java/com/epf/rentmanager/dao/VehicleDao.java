@@ -7,25 +7,34 @@ import java.util.List;
 import com.epf.rentmanager.exception.DaoException;
 import com.epf.rentmanager.model.Vehicle;
 import com.epf.rentmanager.persistence.ConnectionManager;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class VehicleDao {
 	
 	private static VehicleDao instance = null;
+
 	private VehicleDao() {}
-	public static VehicleDao getInstance() {
-		if(instance == null) {
-			instance = new VehicleDao();
-		}
-		return instance;
-	}
 	
-	private static final String CREATE_VEHICLE_QUERY = "INSERT INTO Vehicle(constructeur, modele, nb_places) VALUES(?, ?);";
+	private static final String CREATE_VEHICLE_QUERY = "INSERT INTO Vehicle(constructeur, modele, nb_places) VALUES(?, ?, ?);";
 	private static final String DELETE_VEHICLE_QUERY = "DELETE FROM Vehicle WHERE id=?;";
-	private static final String FIND_VEHICLE_QUERY = "SELECT id, constructeur, nb_places FROM Vehicle WHERE id=?;";
-	private static final String FIND_VEHICLES_QUERY = "SELECT id, constructeur, nb_places FROM Vehicle;";
+	private static final String FIND_VEHICLE_QUERY = "SELECT id, constructeur, modele, nb_places FROM Vehicle WHERE id=?;";
+	private static final String FIND_VEHICLES_QUERY = "SELECT id, constructeur, modele, nb_places FROM Vehicle;";
+	private static final String COUNT_VEHICLES_QUERY = "SELECT COUNT(id) FROM Vehicle;";
 	
 	public long create(Vehicle vehicle) throws DaoException {
-		return 0;
+		try {
+			Connection connection = ConnectionManager.getConnection();
+			PreparedStatement preparedStatement = connection.prepareStatement(CREATE_VEHICLE_QUERY);
+			preparedStatement.setString(1, vehicle.getConstructeur());
+			preparedStatement.setString(2, vehicle.getModele());
+			preparedStatement.setInt(3, vehicle.getNb_places());
+			long id = ((PreparedStatement) preparedStatement).executeUpdate();
+			connection.close();
+			return id;
+		} catch (SQLException e) {
+			throw new DaoException("Echec de la crétion du véhicule Dao");
+		}
 	}
 
 	public long delete(Vehicle vehicle) throws DaoException {
@@ -41,7 +50,7 @@ public class VehicleDao {
 			rs.next();
 
 			Vehicle vehicle = new Vehicle((int)id, rs.getString("constructeur"),
-					rs.getByte("nb_places"));
+					rs.getString("modele"), rs.getByte("nb_places"));
 			return vehicle;
 		} catch (SQLException e) {
 			throw new DaoException("Erreur");
@@ -59,7 +68,8 @@ public class VehicleDao {
 
 			//tant qu'il y a une ligne, on crée un véhicule avec les données fournies
 			while (rs.next()) {
-				Vehicle vehicle = new Vehicle(rs.getInt("id"), rs.getString("constructeur"), rs.getByte("nb_places"));
+				Vehicle vehicle = new Vehicle(rs.getInt("id"), rs.getString("constructeur"),
+						rs.getString("modele"), rs.getByte("nb_places"));
 				vehicles.add(vehicle);
 			}
 
@@ -70,6 +80,20 @@ public class VehicleDao {
 		}
 		return vehicles;
 	}
+
+	public int count() throws DaoException {
+		try  {
+			Connection connection = ConnectionManager.getConnection();
+			PreparedStatement statement = connection.prepareStatement(COUNT_VEHICLES_QUERY);
+			ResultSet rs = ((PreparedStatement) statement).executeQuery();
+			rs.next();
+			return rs.getInt("COUNT(id)");
+		} catch (SQLException e) {
+			throw new DaoException("Le comptage des véhicules n'a pas fonctionné");
+		}
+	}
+
+
 	
 
 }
