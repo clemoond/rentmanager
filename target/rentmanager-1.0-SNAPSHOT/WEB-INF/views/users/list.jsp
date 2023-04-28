@@ -36,19 +36,19 @@
                                 </tr>
                                 <tr>
                                 <c:forEach items="${clients}" var="client">
-                                    <td>${client.id}.</td>
+                                    <td>${client.id}</td>
                                     <td>${client.nom}</td>
                                     <td>${client.prenom}</td>
                                     <td>${client.email}</td>
                                     <td>${client.naissance}</td>
                                     <td>
-                                        <a class="btn btn-primary disabled" href="users/details.html">
+                                        <a class="btn btn-primary" href="users/details?id=${client.id}">
                                             <i class="fa fa-play"></i>
                                         </a>
-                                        <a class="btn btn-success disabled" href="#">
+                                        <a class="btn btn-success" href="users/update?id=${client.id}">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a class="btn btn-danger disabled" href="#">
+                                        <a class="btn btn-danger" href="users/delete?id=${client.id}">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>

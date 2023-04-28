@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<rss version="0.91">
+  <channel>
+    <title>rentmanager - Checkstyle report</title>
+    <link>http://www.example.com</link>
+    <description>rentmanager - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2023</copyright>
+    <item>
+      <title>File: 32,
+             Errors: 1089,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>http://www.example.com/checkstyle.html</link>
+      <description>
+        <p>Click <a href="http://www.example.com/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.VehicleDeleteServlet.java">com/epf/rentmanager/servlet/VehicleDeleteServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.RentDeleteServlet.java">com/epf/rentmanager/servlet/RentDeleteServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.RentListServlet.java">com/epf/rentmanager/servlet/RentListServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  17
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.model.Reservation.java">com/epf/rentmanager/model/Reservation.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  86
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.model.Client.java">com/epf/rentmanager/model/Client.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  77
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.dao.ReservationDao.java">com/epf/rentmanager/dao/ReservationDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  132
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.dao.VehicleDao.java">com/epf/rentmanager/dao/VehicleDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  82
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.ClientCreateServlet.java">com/epf/rentmanager/servlet/ClientCreateServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  21
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.HomeServlet.java">com/epf/rentmanager/servlet/HomeServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  25
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.VehicleListServlet.java">com/epf/rentmanager/servlet/VehicleListServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.VehicleCreateServlet.java">com/epf/rentmanager/servlet/VehicleCreateServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  22
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.ClientUpdateServlet.java">com/epf/rentmanager/servlet/ClientUpdateServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.RentCreateServlet.java">com/epf/rentmanager/servlet/RentCreateServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  27
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.validator.ClientValidator.java">com/epf/rentmanager/validator/ClientValidator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.dao.ClientDao.java">com/epf/rentmanager/dao/ClientDao.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  79
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.exception.ServiceException.java">com/epf/rentmanager/exception/ServiceException.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.utils.IOUtils.java">com/epf/rentmanager/utils/IOUtils.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  47
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.exception.DaoException.java">com/epf/rentmanager/exception/DaoException.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.model.Vehicle.java">com/epf/rentmanager/model/Vehicle.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  65
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.service.VehicleService.java">com/epf/rentmanager/service/VehicleService.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  46
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.ClientDetailsServlet.java">com/epf/rentmanager/servlet/ClientDetailsServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.VehicleUpdateServlet.java">com/epf/rentmanager/servlet/VehicleUpdateServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  16
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.RentUpdateServlet.java">com/epf/rentmanager/servlet/RentUpdateServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  22
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.persistence.FillDatabase.java">com/epf/rentmanager/persistence/FillDatabase.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  22
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.service.ClientService.java">com/epf/rentmanager/service/ClientService.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  63
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.configuration.AppConfiguration.java">com/epf/rentmanager/configuration/AppConfiguration.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.ClientListServlet.java">com/epf/rentmanager/servlet/ClientListServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.persistence.ConnectionManager.java">com/epf/rentmanager/persistence/ConnectionManager.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.main.Test.java">com/epf/rentmanager/main/Test.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.service.ReservationService.java">com/epf/rentmanager/service/ReservationService.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  74
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.servlet.ClientDeleteServlet.java">com/epf/rentmanager/servlet/ClientDeleteServlet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  18
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://www.example.com/checkstyle.html#com.epf.rentmanager.configuration.WebConfiguration.java">com/epf/rentmanager/configuration/WebConfiguration.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+

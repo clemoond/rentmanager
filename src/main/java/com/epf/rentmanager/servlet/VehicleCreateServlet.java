@@ -1,15 +1,9 @@
 package com.epf.rentmanager.servlet;
 
-import com.epf.rentmanager.configuration.AppConfiguration;
-import com.epf.rentmanager.dao.VehicleDao;
 import com.epf.rentmanager.exception.ServiceException;
 import com.epf.rentmanager.model.Vehicle;
-import com.epf.rentmanager.service.ClientService;
 import com.epf.rentmanager.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.servlet.ServletException;
@@ -19,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/cars/create")
+@WebServlet("/vehicles/create")
 public class VehicleCreateServlet extends HttpServlet {
     @Autowired
     VehicleService vehicleService;
@@ -46,6 +40,6 @@ public class VehicleCreateServlet extends HttpServlet {
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
-        response.sendRedirect("/rentmanager/cars");
+        response.sendRedirect("/rentmanager/vehicles");
     }
 }

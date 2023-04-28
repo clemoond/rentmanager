@@ -6,9 +6,13 @@ C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\r
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\ClientDetailsServlet.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\configuration\WebConfiguration.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\service\ReservationService.java
+C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\ClientUpdateServlet.java
+C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\ClientDeleteServlet.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\model\Vehicle.java
+C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\VehicleDeleteServlet.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\RentListServlet.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\HomeServlet.java
+C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\RentUpdateServlet.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\ClientListServlet.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\VehicleListServlet.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\configuration\AppConfiguration.java
@@ -20,7 +24,9 @@ C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\r
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\service\VehicleService.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\exception\DaoException.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\main\Test.java
+C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\VehicleUpdateServlet.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\validator\ClientValidator.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\model\Reservation.java
+C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\servlet\RentDeleteServlet.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\dao\ClientDao.java
 C:\Users\Clémence\Documents\epf\cours\4A\UE_Software_Engineering\langage_JAVA\rentmanager\src\main\java\com\epf\rentmanager\exception\ServiceException.java

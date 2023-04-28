@@ -14,7 +14,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Reservations
+                R&eacuteservations
                 <a class="btn btn-primary" href="${pageContext.request.contextPath}/rents/create">Ajouter</a>
             </h1>
         </section>
@@ -30,7 +30,7 @@
                                     <th style="width: 10px">#</th>
                                     <th>Voiture</th>
                                     <th>Client</th>
-                                    <th>Debut</th>
+                                    <th>D&eacutebut</th>
                                     <th>Fin</th>
                                     <th>Action</th>
                                 </tr>
@@ -50,13 +50,13 @@
                                     <td>${reservation.debut}</td>
                                     <td>${reservation.fin}</td>
                                     <td>
-                                        <a class="btn btn-primary disabled" href="users/details.html">
-                                            <i class="fa fa-play"></i>
-                                        </a>
-                                        <a class="btn btn-success disabled" href="#">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <a class="btn btn-danger disabled" href="#">
+                                        <!-- <a class="btn btn-primary" href="rents/details?id=${reservation.id}"> -->
+                                            <!-- <i class="fa fa-play"></i> -->
+                                        <!-- </a> -->
+                                        <!-- <a class="btn btn-success" href="rents/update?id=${reservation.id}"> -->
+                                            <!-- <i class="fa fa-edit"></i> -->
+                                        <!-- </a> -->
+                                        <a class="btn btn-danger" href="rents/delete?id=${reservation.id}">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>

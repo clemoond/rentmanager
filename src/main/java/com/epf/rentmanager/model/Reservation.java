@@ -49,6 +49,9 @@ public class Reservation {
         this.fin = fin;
     }
 
+    public Reservation(int id){
+        this.id = id;
+    }
     public Reservation(int id, int client_id, int vehicle_id, LocalDate debut, LocalDate fin) {
         this.id = id;
         this.client_id = client_id;

@@ -12,13 +12,13 @@
                 </a>
             </li>
             <li>
-                <a href="${pageContext.request.contextPath}/cars">
+                <a href="${pageContext.request.contextPath}/vehicles">
                     <i class="fa fa-car"></i> <span>Voitures</span>
                 </a>
             </li>
             <li>
                 <a href="${pageContext.request.contextPath}/rents">
-                    <i class="fa fa-pencil"></i> <span>Reservations</span>
+                    <i class="fa fa-pencil"></i> <span>R&eacuteservations</span>
                 </a>
             </li>
         </ul>

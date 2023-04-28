@@ -64,6 +64,11 @@ public class Client {
         this.email = email;
         this.naissance = naissance;
     }
+
+    public Client(int id) {
+        this.id = id;
+    }
+
     public Client(){
         this.id = 0;
         this.nom = "";
@@ -89,5 +94,9 @@ public class Client {
                 ", email='" + email + '\'' +
                 ", naissance=" + naissance +
                 '}';
+    }
+
+    public Client get() {
+        return this;
     }
 }

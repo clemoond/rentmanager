@@ -61,7 +61,7 @@
             <span class="info-box-icon bg-green"><i class="fa fa-pencil"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Reservations</span>
+              <span class="info-box-text">R&eacuteservations</span>
               <span class="info-box-number">${nbReservations}</span>
             </div>
             <!-- /.info-box-content -->
